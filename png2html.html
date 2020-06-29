@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PNG2HTML</title>
+    <style>
+        .fontStyle{
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #header {
+            display: grid;
+            grid-template-columns: 75% 25%;
+        }
+
+        .logo {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .homeNav {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .homeNav>a {
+            text-decoration: none;
+            cursor: pointer;
+            padding: 30px 20px 20px 20px;
+            color: black;
+        }
+        .login{
+            border: none;
+            background-color: white;
+            cursor: pointer;
+            padding: 30px 20px 20px 20px;
+            font-size: 17px;
+        }
+        .postBtn1{
+            border: none;
+            background-color: red;
+            padding: 12px;
+        }
+
+        .middleSection {
+            background-image: url('./images/ideaMiddleSection.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+        }
+
+        .middlebtn {
+            background-image: url('./images/yellowbackground.png');
+            padding-left: 40px;
+            padding-bottom: 75px;
+            width: 50%;
+            padding-top: 30px;
+
+        }
+
+        .content1 {
+            font-size: 50px;
+            color: white;
+            padding-bottom: 0px;
+        }
+
+        .content2 {
+            font-size: 20px;
+            color: white;
+        }
+
+        .btn {
+            cursor: pointer;
+            margin-top: 20px;
+            padding: 17px 40px 17px 40px;
+            font-size: 20px;
+            border-radius: 3px;
+            border: darkred;
+        }
+        .btn2{
+            margin-left: 20px;
+            opacity: 0.8;
+            border: 2px solid whitesmoke;
+        }
+        .lastSectionPart1{
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content3{
+            font-size: 30px;
+        }
+        .toggleBtn{
+            margin-top: 20px;
+            border-radius: 50px;
+            border:3px solid thistle;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        #tBtn1{
+            cursor: pointer;
+            padding: 10px 20px 10px 20px;
+            border: none;
+            background-color: red;
+            color: white;
+            border-radius: 50px;
+        }
+        #tBtn2{
+            cursor: pointer;
+            padding: 10px 20px 10px 20px;
+            border: none;
+            background-color: white;
+            border-radius: 50px;
+        }
+        .lastSectionPart2{
+            padding: 0px 0px 0px 50px;
+            display: flex;
+            /* flex-direction: row; */
+        }
+        .last-Section-Content{
+            width: 70%;
+            padding-bottom: 150px;
+        }
+        .mapImage{
+            background-image: url('./images/map.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            /* background-size: cover; */
+            width: 100%
+        }
+        .content4{
+            padding-right: 100px;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        .content5{
+            font-size: 20px;
+            padding-right: 70px;
+            margin-bottom: 40px;
+
+
+        }
+        .postBtn{
+            cursor: pointer;
+            font-size: 20px;
+            background-color: red;
+            padding:10px 17px 10px 15px;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id='FullPage'>
+
+        <!-- header and navigation bar -->
+
+        <div id='header'>
+            <div class='logo'>
+                <img src="./images/logo.png">
+                <div class='homeNav fontStyle'>
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Why ManDay?</a>
+                    <a href="#">Feature</a>
+                </div>
+
+            </div>
+            <div class='headerSidelogin fontStyle'>
+                <button class="login fontStyle">Login</button>
+                <button class="postBtn1 fontStyle">Post a Requirment</button>
+            </div>
+        </div>
+
+        <!-- middle Section -->
+
+        <div class='middleSection'>
+
+            <div class='middlebtn'>
+
+                <p class="content1 fontStyle">Professional passionate Designers To Clients & Companiees!</p>
+
+                <p class="content2 fontStyle">Get connected to one of the biggest platform..</p>
+
+                <button class='btn fontStyle' style="background-color:red">Hire A Designer</button>
+                <button class='btn btn2 fontStyle'> Join A Designer</button>
+            </div>
+
+        </div>
+
+<!-- last section -->
+
+        <div id="lastSection">
+            <div class="lastSectionPart1 fontStyle">
+                <div class="content3">How can we help?</div>
+                <div class="toggleBtn">
+                    <div id="tBtn1" onclick="colorChange1()">I want to hire</div>
+                    <div id="tBtn2" onclick="colorChange2()">I want to work</div>
+                </div>
+            </div>
+            <div class="lastSectionPart2">
+                <div class="last-Section-Content">
+                    <div class="content4 fontStyle">What kind of work can I get done?</div>
+                    <div class="content5">How does "anything you want" sound? We have experts representing every technical, Professional, and creative field.</div>
+                    <button class="postBtn">Post a Requirment</button>
+                </div>
+                <div class="mapImage"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- script -->
+
+    <script>
+        function colorChange1() {
+            document.getElementById("tBtn1").style.backgroundColor = "red";
+            document.getElementById("tBtn2").style.backgroundColor = "white";
+            document.getElementById("tBtn1").style.color = "white";
+            document.getElementById("tBtn2").style.color = "black";
+        }
+        function colorChange2() {
+            document.getElementById("tBtn1").style.backgroundColor = "white";
+            document.getElementById("tBtn2").style.backgroundColor = "red";
+            document.getElementById("tBtn1").style.color = "black";
+            document.getElementById("tBtn2").style.color = "white";
+        }
+        </script>
+</body>
+
+</html>
